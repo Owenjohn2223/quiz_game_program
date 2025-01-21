@@ -17,9 +17,20 @@ quiz = [
     }
 ]
 
+def run_quiz(quiz):
+    score = 0
+    for quizzes in quiz:
+        print(quizzes["question"])
+        for option in quizzes["options"]:
+            print(option)
+        answer = input("Input answer: ")
+        if answer == quizzes["answer"]:
+            print("Tumpak, good job!\n")
+            score += 1
+        else:
+            print("Engk! Ligwak. The right answer was", quizzes["answer"], '\n')
+    
+    print(f"You got {score} out of {len(quiz)} questions correct")
 
-for quizzes in quiz:
-    print(quizzes["question"])
-    for option in quizzes["options"]:
-        print(option)
-    answer = input("Input answer: ")
+
+run_quiz(quiz)
