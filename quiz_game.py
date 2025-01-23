@@ -12,10 +12,16 @@ quiz = [
     },
     {
         "question": "[3. What type of memory is used for temporary data storage while the computer is running?]",
-        "options": ["A. ROM","B.) RAM", "C.) SSD", "D.) HDD"],
+        "options": ["A.) ROM","B.) RAM", "C.) SSD", "D.) HDD"],
         "answer": "B"
     }
 ]
+
+player_name = input("What's your name? ")
+player_age = input("How old? ")
+
+with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+    f.write(f"\n- {player_name}, {player_age}\t")
 
 def run_quiz(quiz):
     score = 0
@@ -23,7 +29,7 @@ def run_quiz(quiz):
         print(quizzes["question"])
         for option in quizzes["options"]:
             print(option)
-        answer = input("Input answer: ")
+        answer = input("Input answer: ").capitalize()
         if answer == quizzes["answer"]:
             print("Tumpak, good job!\n")
             score += 1
@@ -32,5 +38,7 @@ def run_quiz(quiz):
     
     print(f"You got {score} out of {len(quiz)} questions correct")
 
+    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+        f.write(f"\t{score}/{len(quiz)}\n")
 
 run_quiz(quiz)
