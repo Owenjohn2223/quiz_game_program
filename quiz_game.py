@@ -114,7 +114,7 @@ quiz4 = [
 player_name = input("What's your name? ")
 player_age = input("How old? ")
 
-with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+with open('players_scores.txt', 'a') as f:
     f.write(f"\n- {player_name}, {player_age}\t")
 
 def technology(quiz1):
@@ -130,9 +130,9 @@ def technology(quiz1):
         else:
             print("Engk! Ligwak. The right answer was", quizzes["answer"], '\n')
     
-    print(f"You got {points} points!")
+    print(f"You got {points} points, Good Job!")
 
-    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/quiz_game_program/players_scores.txt', 'a') as f:
         f.write(f"\tTechnology - {points}\n")
 
 
@@ -149,9 +149,9 @@ def history(quiz2):
         else:
             print("Engk! Ligwak. The right answer was", quizzes["answer"], '\n')
     
-    print(f"You got {points} points!")
+    print(f"You got {points} points, Good Job!")
 
-    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/quiz_game_program/players_scores.txt', 'a') as f:
         f.write(f"\tHistory - {points}\n")
 
 def literature(quiz3):
@@ -167,9 +167,9 @@ def literature(quiz3):
         else:
             print("Engk! Ligwak. The right answer was", quizzes["answer"], '\n')
     
-    print(f"You got {points} points!")
+    print(f"You got {points} points, Good Job!")
 
-    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/quiz_game_program/players_scores.txt', 'a') as f:
         f.write(f"\tLiterature - {points}\n")
 
 def random(quiz4):
@@ -185,9 +185,9 @@ def random(quiz4):
         else:
             print("Engk! Ligwak. The right answer was", quizzes["answer"], '\n')
     
-    print(f"You got {points} points!")
+    print(f"You got {points} points, Good Job!")
 
-    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/test_file.txt', 'a') as f:
+    with open('C:/Users/Owen John/OneDrive/Desktop/PLD Programs folder/quiz_game_program/players_scores.txt', 'a') as f:
         f.write(f"\tRandom - {points}\n")
 
 while True:
@@ -208,7 +208,7 @@ while True:
                 random(quiz4)
                 break
     except:
-        print("////Choose a valid number////")
+        print("////Choose a valid number////\n")
         continue
             
 
